@@ -1,0 +1,61 @@
+<div xmlns="http://www.w3.org/1999/html">
+    <div class="starter-template">
+    	<b>Welcome to, Employer's job positing page</b>
+    </div>
+</div>
+
+<form class="form-horizontal">
+<div class="form-group row" style="margin-left: -100px; margin-bottom: 30px">
+	<div class="col-md-3">
+        <select class="form-control" ng-model="jobCreationAttribs.industry">
+   	   		<option value="">Choose a industry</option>
+            <option ng-repeat="i in industry" value={{i.value}}>{{i.name}}</option>
+        </select>
+     </div>
+     
+     <div class="col-md-1">
+     </div>
+     
+     <div class="col-md-3">
+     	<select class="form-control" ng-model="jobCreationAttribs.functionType">
+        	<option value="">Choose a function</option>
+            <option ng-repeat="i in jobFunctions" value={{i.value}}>{{i.name}}</option>
+        </select>
+	</div>
+	
+	<div class="col-md-1">
+    </div>
+     
+    <div class="col-md-3">
+     	<select class="form-control" ng-model="jobCreationAttribs.country">
+        	<option value="">Choose a country</option>
+            <option ng-repeat="i in country" value={{i.value}}>{{i.name}}</option>
+        </select>
+	</div> 
+	
+</div>
+
+<div class="row" style="margin-left: -100px;margin-bottom: 30px">
+	<div class="col-lg-5">
+		<div class="form-group">
+			<label class="col-md-2 control-label">Description</label>
+				<div class="col-md-4">
+					<textarea class="form-control" rows="6" ng-model="jobCreationAttribs.briefDesc"></textarea>
+				</div>
+		</div>
+	</div>
+</div>
+
+<div class="row" style="margin-left: -100px;margin-bottom: 30px">
+	<div class="col-lg-5">
+		<div class="form-group">
+			<label class="col-md-2 control-label">Detailed Description</label>
+				<div class="col-md-4">
+					<textarea class="form-control" rows="6" ng-model="jobCreationAttribs.detailDesc"></textarea>
+				</div>
+		</div>
+	</div>
+</div>
+
+<button style="margin-left: -85px; margin-bottom: 30px" ng-click="submitFormData()" class="btn btn-md btn-success">Create Job</button>
+</form>

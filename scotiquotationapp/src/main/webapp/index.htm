@@ -1,0 +1,56 @@
+<!doctype html>
+<html ng-app="quotationApp">
+  <head>
+	  <title>Angular App</title>
+	  
+	  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+	  <link rel="stylesheet" href="assets/css/style.css">	
+  </head>
+  <body>
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+	    <div class="container">
+	        <div class="navbar-header">
+	            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+	            	aria-expanded="false" aria-controls="navbar">
+	                <span class="sr-only">Toggle navigation</span>
+	                <span class="icon-bar"></span>
+	                <span class="icon-bar"></span>
+	                <span class="icon-bar"></span>
+	            </button>
+	            <a class="navbar-brand" href="#" style="color: #ffffff">Scoti Quoation App</a>
+	        </div>
+	        <div id="navbar" class="collapse navbar-collapse">
+	            <ul class="nav navbar-nav" style="float: right; color: #ffffff">
+	                <li><a href="#!/createJobs" style="color: #ffffff">Create Jobs</a></li>
+	                <li><a href="#!/jobListing" style="color: #ffffff">Job Listing</a></li>
+	            </ul>
+	        </div>
+	    </div>
+	</nav>
+  
+    <div class="container" style="margin-bottom: 70px">
+      <div ng-view=""></div>
+    </div>
+    
+    <div class="navbar navbar-default navbar-fixed-bottom">
+	    <div class="container">
+	        <p class="navbar-text pull-left">&copy; Scoti Quoation Application</p>
+	    </div>
+	</div>
+    
+    
+<!-- 		Loading Core javascript files 
+===================================================================================-->
+    <script src="assets/js/jquery-3.2.1.min.js"></script>
+	<script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/angular.min.js"></script>
+	<script src="assets/js/angular-route.min.js"></script>
+	
+<!-- 		Loading Application specific javascript files
+================================================================================== -->	
+	<script src="app/app.module.js"></script>
+	<script src="app/app.route.js"></script>
+	<script src="app/components/job/jobController.js"></script>
+	<script src="app/components/app.job.service.js"></script>
+  </body>
+</html>

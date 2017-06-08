@@ -1,0 +1,48 @@
+<div xmlns="http://www.w3.org/1999/html">
+    <div class="starter-template">
+    	<b>Welcome to Job listing page</b>
+    </div>
+</div>
+
+<form class="form-horizontal">
+<div class="form-group row" style="margin-left: -100px; margin-bottom: 30px">
+	<div class="row" style="margin-bottom: 30px">
+	<div class="col-lg-2">
+	</div>
+	<div class="col-lg-8">	
+		<div class="panel panel-default">
+                <!-- Default panel contents -->
+              <div class="panel-heading"><span class="lead">List of Jobs </span></div>
+              <div class="tablecontainer">
+                  <table class="table table-hover" ng-if="jobListing.length > 0">
+                      <thead>
+                      	  <tr ng-if="jobListing.length == 0">No jobs found</tr>
+                          <tr>
+                          	  <th>Job ID</th>
+                              <th>Industry</th>
+                              <th>Function</th>
+                              <th>Country</th>
+                              <th>Brief Description</th>
+                              <th width="20%"></th>
+                          </tr>
+                      </thead>
+                      <tbody>
+						  <tr ng-repeat="job in jobsListing">
+                          	  <td><span ng-bind="job.jobId"></span></td>
+                              <td><span ng-bind="job.industry"></span></td>
+                              <td><span ng-bind="job.functionType"></span></td>
+                              <td><span ng-bind="job.country"></span></td>
+                              <td><span ng-bind="job.briefDesc"></span></td>
+                              <td>
+                              <button type="button" ng-click="edit(job.jobId)" class="btn btn-success custom-width">Edit</button>
+                              <button type="button" ng-click="removeJob(job.jobId)" class="btn btn-danger custom-width">Remove</button>
+                              </td>
+                          </tr>
+                      </tbody>
+                  </table>
+              </div>
+          </div>
+	</div>
+</div>
+</div>
+</form>
